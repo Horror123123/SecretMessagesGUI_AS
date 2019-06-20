@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/txtIn"
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:background="@drawable/new_et_style"
+            android:ems="10"
+            android:gravity="start|right|center_horizontal|top"
+            android:inputType="textMultiLine"
+            android:lines="4"
+            android:scrollbars="vertical"
+            android:text="Введите текст для шифрования!" />
+
+        <EditText
+            android:id="@+id/txtOut"
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="165dp"
+            android:layout_marginEnd="-2dp"
+            android:background="@drawable/new_et_style"
+            android:ems="10"
+            android:gravity="start|right|center_horizontal|top"
+            android:inputType="textMultiLine|textNoSuggestions"
+            android:lines="4"
+            android:scrollbars="vertical" />
+
+        <SeekBar
+            android:id="@+id/sb"
+            android:layout_width="410dp"
+            android:layout_height="32dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="false"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="268dp"
+            android:layout_marginEnd="0dp"
+            android:max="50"
+            android:progress="25" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="false"
+            android:layout_marginStart="-332dp"
+            android:layout_marginTop="119dp"
+            android:layout_toEndOf="@+id/sb"
+            android:text="Key: "
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <EditText
+            android:id="@+id/txtKey"
+            android:layout_width="53dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="false"
+            android:layout_marginTop="119dp"
+            android:layout_marginEnd="238dp"
+            android:background="@drawable/new_et_style"
+            android:ems="10"
+            android:inputType="numberSigned|number"
+            android:text="25"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="107dp"
+            android:layout_marginEnd="81dp"
+            android:background="@drawable/new_et_style"
+            android:text="Encode/Decode" />
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
