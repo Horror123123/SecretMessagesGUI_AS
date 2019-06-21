@@ -104,6 +104,12 @@ public class MainActivity extends AppCompatActivity {
         btn = (Button) findViewById(R.id.btn);
         txtIn.requestFocus();
         txtIn.selectAll();
+
+        Intent receivedIntent = getIntent();
+        String receivedText = receivedIntent.getStringExtra(Intent.EXTRA_TEXT);
+        if (receivedText!= null)
+            txtIn.setText(receivedText);
+
         /*Пказывает клавиатуру*/
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
 
